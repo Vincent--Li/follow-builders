@@ -151,6 +151,62 @@
     {
       "name": "Elon Musk",
       "handle": "elonmusk"
+    },
+    {
+      "name": "Dan Koe",
+      "handle": "TheDanKoe"
+    },
+    {
+      "name": "Yohei Nakajima",
+      "handle": "yoheinakajima"
+    },
+    {
+      "name": "Pieter Levels",
+      "handle": "levelsio"
+    },
+    {
+      "name": "Jason Liu",
+      "handle": "jxnlco"
+    },
+    {
+      "name": "Dipam Vasudev",
+      "handle": "DipamVasudev"
+    },
+    {
+      "name": "Simon Willison",
+      "handle": "simonw"
+    },
+    {
+      "name": "Eyal Toledano",
+      "handle": "eyaltoledano"
+    },
+    {
+      "name": "Labml AI",
+      "handle": "labml_ai"
+    },
+    {
+      "name": "Jason Wei",
+      "handle": "_jasonwei"
+    },
+    {
+      "name": "Abhishek Thakur",
+      "handle": "abhi1thakur"
+    },
+    {
+      "name": "Sawyer Hood",
+      "handle": "sawyerhood"
+    },
+    {
+      "name": "Zachary Caceres",
+      "handle": "embedded_zachary"
+    },
+    {
+      "name": "Erik Grinaker",
+      "handle": "erikgrinaker"
+    },
+    {
+      "name": "Josh Carbone",
+      "handle": "caborne_josh"
     }
   ]
 }
