@@ -9,6 +9,9 @@
   },
   "dependencies": {
     "dotenv": "^16.4.0",
-    "proper-lockfile": "^4.1.0"
+    "https-proxy-agent": "^9.0.0",
+    "node-fetch": "^3.3.2",
+    "proper-lockfile": "^4.1.0",
+    "undici": "^8.1.0"
   }
 }

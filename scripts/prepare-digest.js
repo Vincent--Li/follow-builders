@@ -21,6 +21,25 @@ import { existsSync } from 'fs';
 import { join } from 'path';
 import { homedir } from 'os';
 
+// -- Proxy-aware fetch ---------------------------------------------------------
+import nodeFetch from 'node-fetch';
+import { HttpsProxyAgent } from 'https-proxy-agent';
+
+const _proxyUrl = process.env.HTTPS_PROXY || process.env.HTTP_PROXY || process.env.https_proxy || process.env.http_proxy;
+const _proxyAgent = _proxyUrl ? new HttpsProxyAgent(_proxyUrl) : null;
+
+async function fetchJSON(url) {
+  const res = await nodeFetch(url, { agent: _proxyAgent });
+  if (!res.ok) return null;
+  return res.json();
+}
+
+async function fetchText(url) {
+  const res = await nodeFetch(url, { agent: _proxyAgent });
+  if (!res.ok) return null;
+  return res.text();
+}
+
 // -- Constants ---------------------------------------------------------------
 
 const USER_DIR = join(homedir(), '.follow-builders');
@@ -38,20 +57,6 @@ const PROMPT_FILES = [
   'digest-intro.md',
   'translate.md'
 ];
-
-// -- Fetch helpers -----------------------------------------------------------
-
-async function fetchJSON(url) {
-  const res = await fetch(url);
-  if (!res.ok) return null;
-  return res.json();
-}
-
-async function fetchText(url) {
-  const res = await fetch(url);
-  if (!res.ok) return null;
-  return res.text();
-}
 
 // -- Main --------------------------------------------------------------------
 
